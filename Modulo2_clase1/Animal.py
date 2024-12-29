@@ -1,6 +1,6 @@
 #diferencia entre el metodo de instancia y metodo de una clase se trae el objeto con el parametro self
 #importante en el motodo de instancia se trae el parametro o se usa la palabra selft (se trae el parametro self)
-#en el metodo de clase no se trae una instancia si no que se trae toda la clase (se trae el prefijo cl de clase)
+#en el metodo de clase no se trae una instancia si no que se trae toda la clase (se trae el prefijo cls de clase)
 # EJEMPLO DE METODO DE INSTANCIA
 class Animal:
     #definimos el metodo constructor
