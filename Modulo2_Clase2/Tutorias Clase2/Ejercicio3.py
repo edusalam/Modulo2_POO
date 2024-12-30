@@ -1,8 +1,13 @@
-#EJERCICIO 5: MODIFICA LA CLASE cuentaBancaria PARA USAR DECORADORES @property Y @setter EN EL ATRIBUTO _SALDO
+#AGREGUE UN METODO PROTEGIDO _CALCULAR_INTERES EN LA CLASE CUENTA BANCARIA
+#QUE CALCULE UN 5% DE INTERESES SOBRE EL SALDO ACTUAL.
 class CuentaBancaria:
     def __init__(self, saldo, saldo2):
         self.__saldo = saldo
         #self.saldo2 = saldo2
+
+    def _calcular_interes(self):
+        interes = self.__saldo * 0.05
+        print(f'el interes es de {interes}')
     
     @property
     def saldo(self):
@@ -32,4 +37,4 @@ cuentaEduard.consultar_saldo()
 cuentaEduard.depositar(100)
 cuentaEduard.saldo = -100
 print(cuentaEduard.saldo)
-
+cuentaEduard._calcular_interes()
