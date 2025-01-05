@@ -41,18 +41,19 @@ class Cuadrado(Formas):
           return f'el area de un cuadrado es {self.lado ** 2}'
     
     
-#creamos una lissta
-Formas = [Circulo(5), Rectangulo(10, 10), Cuadrado(4), Rectangulo(10,20), Circulo(22)]
+#creamos una lissta (objetos)
+forma = [Circulo(5), Rectangulo(10, 10), Cuadrado(4), Rectangulo(10,20), Circulo(22)]
 
-print('area de las Formas:')
-for forma in Formas:
-    print(forma.area())
+print('area de las Forma:')
+for formas in forma:
+    print(formas.area())
 
 circulo1 = Circulo(5)
-rectangulo1 = Rectangulo(10,20)
+print(circulo1.perimetro())
 
-print(circulo1.perimetro)
-print(rectangulo1.perimetro)
+
+rectangulo1 = Rectangulo(10,20)
+print(rectangulo1.perimetro())
   
 
 
