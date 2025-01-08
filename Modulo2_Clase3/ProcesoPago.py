@@ -25,6 +25,7 @@ class Stripe(ProcesoPago):
     def reembolsoPago(self, trasaccionId):
         print(f'Reembolsando Id transaccion numero{trasaccionId} por stripe')
 
+# NO LO ENTENDI MUY BIEN
 if __name__ == '__main__':
    procesopypal = Paypal()
    procesostripe = Stripe()
