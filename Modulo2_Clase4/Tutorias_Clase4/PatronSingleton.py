@@ -14,11 +14,11 @@ class SistemaGuardado:
 
     def guardar_juego(self, dato_a_guardar):
         with open(self.archivo_guardado, 'w') as f:
-            json.dump(dato_a_guardar,f, indent=4)
+            json.dump(dato_a_guardar,f, indent=2)
 
     def cargar_juego(self):
         with open(self.archivo_guardado, 'r') as f:
-            return f.read()
+             return json.load(f)
         
 class Jugador():
     def __init__(self, nombre, nivel):
@@ -35,15 +35,18 @@ class Jugador():
         return {'nombre': self.nombre, 'nivel': self.nivel}
     @classmethod
     def deserializar(self, data):
-        return cls(data['nombre'], data['nivel'])
+        return self(data['nombre'], data['nivel'])
 
 def CargarPartida():
-        guardado = SistemaGuardado.get_instance()
-        dato_a_guardar = guardado.cargar_juego()
-        jugador = Jugador.deserializar(dato_a_guardar)
-    
+        guardo = SistemaGuardado.get_instance()
+        datos_cargados = guardo.cargar_juego()
+        jugador = Jugador.deserializar(datos_cargados)
+'''    
 jugador1 = Jugador('eduard',50)
-
 guardado = SistemaGuardado.get_instance()
 guardado.guardar_juego(jugador1.serializar())
-
+'''
+guardando = SistemaGuardado.get_instance()
+datos_cargados = guardando.cargar_juego()
+Jugador_cargado = Jugador.deserializar(datos_cargados)
+print(Jugador_cargado.nombre)
