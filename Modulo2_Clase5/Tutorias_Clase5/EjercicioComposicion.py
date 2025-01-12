@@ -15,7 +15,7 @@ class Rueda:
 class Coche:
     def __init__(self, motor, ruedas):
         self.motor = motor
-        self.ruedas = ruedas
+        self.ruedas = ruedasS
 
     def iniciar_viaje(self):
         self.motor.encender()
