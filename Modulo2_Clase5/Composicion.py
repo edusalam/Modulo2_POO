@@ -1,13 +1,4 @@
 #EJERCICION DE COMPOSICION
-class Vehiculo:
-    def __init__(self, motor):
-        self.motor = motor   #ESTO SE LLAMA ENCAPSULAMIENTO
-        
-    def encender(self):
-        print('encendiendo el vehiculo')
-        self.motor.iniciar()
-
-
 class Motor:
     def __init__(self):
         pass
@@ -24,6 +15,14 @@ class MotorElectrico(Motor):
         pass
     def iniciar(self):
         print('motor electrico encendido')
+
+class Vehiculo:
+    def __init__(self, motor):
+        self.motor = motor   #ESTO SE LLAMA ENCAPSULAMIENTO
+        
+    def encender(self):
+        print('encendiendo el vehiculo')
+        self.motor.iniciar()
 
 #CREAMOS LOS OBJETOS        
 motor_gasolina = MotorGasolina()
