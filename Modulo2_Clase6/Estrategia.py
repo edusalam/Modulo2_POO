@@ -40,6 +40,8 @@ print(f'total con 50% de descuento ${pedido2.calcularTotal()}')
 pedido3 = Pedido(1000, DescuentoFijo(100))
 print(f'total con descuento fijo de $100: ${pedido3.calcularTotal()}')
 
+#actualizare el codigo de este programa
+
 
           
         
