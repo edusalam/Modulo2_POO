@@ -1,4 +1,4 @@
-#SON CASOS DE USOS Y SON REUTILIZABLES
+#SON CASOS DE USOS Y SON REUTILIZABLES (SON FUNCIONES)
 Productos = [
     {'nombre': 'laptop', 'Precio':1500},
     {'nombre': 'celular', 'Precio':1000},
